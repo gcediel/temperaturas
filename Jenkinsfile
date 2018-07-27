@@ -1,25 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage("Compile") {
-            steps {
-            }
-        }
-        stage("Unit test") {
-            steps {
-            }
-        }
-        stage("Code coverage") {
-            steps {
-            }
-        }
-        stage("Static code analysis") {
-            steps {
-        }
-        stage("Package") {
-            steps {
-            }
-        }
         stage("Docker build") {
             steps {
                 sh "docker -H 192.168.0.11:2375 build -t quercus.elbor.org:5000/temperaturas:${BUILD_TIMESTAMP} ."
@@ -39,5 +20,5 @@ pipeline {
             steps {
             }
         }
-	}
+    }
 }
