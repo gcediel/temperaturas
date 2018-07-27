@@ -13,7 +13,7 @@ pipeline {
         }
         stage("Docker run") {
             steps {
-                sh "docker -H 192.168.0.11:2375 run -d -p 9080:5000 temperaturas:${BUILD_TIMESTAMP}"
+                sh "docker -H 192.168.0.11:2375 run -d -p 9080:5000 quercus.elbor.org:5000/temperaturas:${BUILD_TIMESTAMP}"
             }
         }
     }
